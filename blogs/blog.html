@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blogs</title>
+    <link rel="stylesheet" href="blog.css">
+    <!--  -->
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--  -->
+    <!-- Bootrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!--  -->
+</head>
+
+<body>
+    <div class="container">
+        <div class="row hero">
+            <header class="header w-100 d-flex justify-content-around  position-relative">
+                <h1 class="logo"><i class="fa-solid fa-bars fs-4 d-lg-none barBtn" onclick="showNav()"></i> CasaNova.
+                </h1>
+                <div class="middle  d-none d-lg-block">
+                    <ul class="d-flex gap-5 h-100 align-items-center  ">
+                        <li class="list-unstyled fs-5 fw-light">
+                            <a href="../home/home.html" class="text-decoration-none">
+                                Home
+                            </a>
+                        </li>
+                        <li class="list-unstyled fs-5 fw-light">
+                            <a href="../shop/shop.html" class="text-decoration-none">
+                                Shop
+                            </a>
+                        </li>
+                        <li class="list-unstyled fs-5 fw-light">
+                            <a href="./blogs/blog.html" class="text-decoration-none active">
+                                Blog
+                            </a>
+                        </li>
+                        <li class="list-unstyled fs-5  fw-light">
+                            <a href="../contact-us/contact.html" class="text-decoration-none">
+                                Contact Us
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="right-components  d-flex gap-3 align-items-center">
+                    <div class="searchCont  d-none d-md-block">
+                        <i class="fa-solid fa-magnifying-glass fs-4 searchBtn" onclick="openSearch()"></i>
+                        <input type="text" placeholder="Search" class="searchInput z-2">
+                    </div>
+                    <a href="/sign-up/sign.html"> <i class="fa-regular fa-circle-user fs-4 "></i> </a>
+                    <a href="#"><i class="fa-solid fa-basket-shopping fs-4" onclick="openCart()"><span
+                                class="badge bg-black">0</span></i></a>
+                </div>
+            </header>
+            <div class="navCont row w-auto z-2">
+                <div class="p-3 navB">
+                    <div class="head d-flex justify-content-between align-items-center">
+                        <h1 class="fw-light">CasaNova.</h1>
+                        <i class="fa-solid fa-xmark fs-1 closeNav" onclick="closeNav()"></i>
+                    </div>
+                    <div class="input-container bg-light mt-4 w-100">
+                        <input type="text" name="search" autocomplete="off" id="searchInput" placeholder="Search"
+                            class="border-0">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                            fill="#5f6368">
+                            <path
+                                d="M784-120 532-372q-30 24-69 38t-83 14q-109 0-184.5-75.5T120-580q0-109 75.5-184.5T380-840q109 0 184.5 75.5T640-580q0 44-14 83t-38 69l252 252-56 56ZM380-400q75 0 127.5-52.5T560-580q0-75-52.5-127.5T380-760q-75 0-127.5 52.5T200-580q0 75 52.5 127.5T380-400Z">
+                            </path>
+                        </svg>
+                    </div>
+                    <ul class="list-unstyled p-4 d-flex flex-column gap-4 mt-3 navList">
+                        <li>
+                            <a href="../home/home.html" class="text-decoration-none fs-5 fst-italic">Home</a>
+                        </li>
+                        <li>
+                            <a href="../shop/shop.html" class="text-decoration-none fs-5 fst-italic">Shop</a>
+                        </li>
+                        <li>
+                            <a href="./blogs/blog.html" class="text-decoration-none fs-5 fst-italic">Blog</a>
+                        </li>
+                        <li>
+                            <a href="../contact-us/contact.html" class="text-decoration-none fs-5 fst-italic">Contact
+                                Us</a>
+                        </li>
+                    </ul>
+                    <div class="bottom col-10 ps-4 mt-5">
+                        <div class="card-cont d-flex justify-content-between">
+                            <h2>Card</h2>
+                            <a href="../cart/cart.html">
+                                <i class="fa-solid fa-basket-shopping"><span
+                                        class="badge bg-black rounded-5 ms-1">0</span></i>
+                            </a>
+                        </div>
+                        <div class="wish-list d-flex justify-content-between">
+                            <h2>Wishlist</h2>
+                            <a href="#wishList">
+                                <i class="fa-regular fa-heart"><span class="badge bg-black rounded-5 ms-1">0</span></i>
+                            </a>
+                        </div>
+                        <button class="signBtn w-100 p-1 mt-2 fs-3 rounded-1">Sign In</button>
+                        <div class="social d-flex gap-3 mt-3 text-black">
+                            <a href="#"><i class="fa-brands fa-instagram text-decoration-none fs-1"></i></a>
+                            <a href="#"><i class="fa-brands fa-facebook text-decoration-none fs-1"></i></a>
+                            <a href="#"><i class="fa-brands fa-youtube text-decoration-none fs-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cart-cont row">
+                <div class="cart-nav col-sm-8 col-md-5 col-lg-4 ms-auto">
+                    <div class="cart-head col-12 d-flex justify-content-between align-items-center p-2">
+                        <h2>Cart</h2>
+                        <i class="fa-solid fa-xmark fs-3 text-dark text-opacity-50" onclick="closeCart()"></i>
+                    </div>
+                    <div class="product-cont mt-4">
+                        <!-- <div class="prd row d-flex align-items-center border-bottom p-2 mt-3">
+                        <div class="prd-img col-4 col-md-3">
+                            <img src="../shop/productImg/bed.png" alt="" class="img-fluid">
+                        </div>
+                        <div class="col-8 col-md-8 prd-img">
+                            <div class="head d-flex justify-content-between align-items-center">
+                                <h5 class="prd-name m-0 p-0">Modern Bed</h5>
+                                <p class="prd-price m-0 p-0 fw-bold">$29.99</p>
+                            </div>
+                            <div
+                                class="middle d-flex justify-content-between align-items-center text-dark text-opacity-50">
+                                <p class="color m-0 p-0">Color: Black</p>
+                                <i class="fa-solid fa-xmark fs-3"></i>
+                            </div>
+                            <div
+                                class="in-decreament d-flex justify-content-center align-items-center  gap-2 rounded-2 p-md-0">
+                                <p class="fs-5 fw-bold  m-0 minus">−</p>
+                                <p class="fs-3 m-0 count">1</p>
+                                <p class="fs-5 fw-bold m-0 plus">＋</p>
+                            </div>
+                        </div>
+                    </div> -->
+                    </div>
+                    <div class="card-bottom">
+                        <!-- <div class="sub-total d-flex justify-content-between align-items-center p-1 border-bottom">
+                        <h5 class="text-dark text-opacity-50">Subtotal</h5>
+                        <p class="m-0 p-0 fw-bold">$99.99</p>
+                    </div> -->
+                        <div class="total d-flex justify-content-between align-items-center p-1 border-bottom mt-2">
+                            <h5>Total</h5>
+                            <p class="total-price m-0 p-0 fw-bold">$199.99</p>
+                        </div>
+                    </div>
+                    <button
+                        class="col-9 ms-auto me-auto d-flex justify-content-center p-2 mt-2 rounded-3">Checkout</button>
+                    <a href="../cart/cart.html"
+                        class="viewCart col-3 ms-auto me-auto d-flex justify-content-center mt-2">
+                        View Cart</a>
+                </div>
+            </div>
+            <div class="main row d-flex flex-column justify-content-center">
+                <div class="hrefs d-flex gap-2 fw-bold justify-content-center">
+                    <a class="text-primary" href="../home/home.html">Home ></a>
+                    <a class="text-primary" href="./blog.html">Blog</a>
+                </div>
+                <h1 class="fw-bold text-center">Our Blog</h1>
+                <p class="fw-semibold text-center">Home ideas and design inspiration</p>
+            </div>
+            <div class="blogs row mt-4">
+                <div class="head d-flex gap-3">
+                    <a href="#" class="fw-semibold border-bottom border-black border-2">All Blog</a>
+                    <a href="#" class="opacity-50">Featured</a>
+                </div>
+                <div class="blogs-cont d-flex gap-3 flex-wrap justify-content-center mt-3">
+                    <div class="blog  col-md-5 col-lg-3">
+                        <img class="img-fluid h-75" src="../home/articelsImg/aricel1.jpg" alt="">
+                        <h6 class="title fw-semibold mt-2">10 Decoration Ideas</h6>
+                        <span class="date opacity-75 fw-lighter">March 14, 2025</span>
+                        <button class="position-absolute rounded-2"
+                            onclick="window.location.href='../blogs-content/blog1.html'">Read</button>
+                    </div>
+                    <div class="blog col-md-5 col-lg-3">
+                        <img class="img-fluid h-75" src="../home/articelsImg/articel3.jpg" alt="">
+                        <h6 class="title fw-semibold mt-2">Perfect Living Room Furniture</h6>
+                        <span class="date opacity-75 fw-lighter">March 14, 2025</span>
+                        <button class="position-absolute rounded-2"
+                            onclick="window.location.href='../blogs-content/blog1.html'">Read</button>
+                    </div>
+                    <div class="blog col-md-5 col-lg-3">
+                        <img class="img-fluid h-75" src="../home/articelsImg/articel2.jpg" alt="">
+                        <h6 class="title fw-semibold mt-2">Make Your Home Spacious</h6>
+                        <span class="date opacity-75 fw-lighter">March 14, 2025</span>
+                        <button class="position-absolute rounded-2"
+                            onclick="window.location.href='../blogs-content/blog1.html'">Read</button>
+                    </div>
+                    <div class="blog col-md-5 col-lg-3">
+                        <img class="img-fluid h-75" src="./blogPhotos/articel4.jpg" alt="">
+                        <h6 class="title fw-semibold mt-2">Smart Solutions for Small Spaces: Functional Furniture Ideas
+                        </h6>
+                        <span class="date opacity-75 fw-lighter ">March 14, 2025</span>
+                        <button class="position-absolute rounded-2"
+                            onclick="window.location.href='../blogs-content/blog1.html'">Read</button>
+                    </div>
+                    <div class="blog col-md-5 col-lg-3">
+                        <img class="img-fluid h-75" src="./blogPhotos/articel5.jpg" alt="">
+                        <h6 class="title fw-semibold mt-2">Wooden Furniture Care: Tips for Long-Lasting Use</h6>
+                        <span class="date opacity-75 fw-lighter">March 14, 2025</span>
+                        <button class="position-absolute rounded-2"
+                            onclick="window.location.href='../blogs-content/blog1.html'">Read</button>
+                    </div>
+                    <div class=" blog col-md-5 col-lg-3">
+                        <img class="img-fluid h-75" src="./blogPhotos/articel6.jpg" alt="">
+                        <h6 class="title fw-semibold mt-2">Living Room Decoration: How to Create a Stylish and Cozy
+                            Space?</h6>
+                        <span class="date opacity-75 fw-lighter ">March 14, 2025</span>
+                        <button class="position-absolute rounded-2"
+                            onclick="window.location.href='../blogs-content/blog1.html'">Read</button>
+                    </div>
+                    <div class="blog col-md-5 col-lg-3">
+                        <img class="img-fluid h-75" src="./blogPhotos/articel7.jpg" alt="">
+                        <h6 class="title fw-semibold mt-2">Minimalist Furniture: How to Design a Spacious and Elegant
+                            Home?</h6>
+                        <span class="date opacity-75 fw-lighter ">March 14, 2025</span>
+                        <button class="position-absolute rounded-2"
+                            onclick="window.location.href='../blogs-content/blog1.html'">Read</button>
+                    </div>
+                    <div class="blog col-md-5 col-lg-3">
+                        <img class="img-fluid h-75" src="./blogPhotos/articel8.jpg" alt="">
+                        <h6 class="title fw-semibold mt-2">The Perfect Bedroom Furniture: Balancing Comfort and
+                            Aesthetics</h6>
+                        <span class="date opacity-75 fw-lighter ">March 14, 2025</span>
+                        <button class="position-absolute rounded-2"
+                            onclick="window.location.href='../blogs-content/blog1.html'">Read</button>
+                    </div>
+                    <div class="blog col-md-5 col-lg-3">
+                        <img class="img-fluid h-75" src="./blogPhotos/articel9.jpg" alt="">
+                        <h6 class="title fw-semibold mt-2">Choosing the Right Sofa: Comfort, Style, and Durability Tips</h6>
+                        <span class="date opacity-75 fw-lighter ">March 14, 2025</span>
+                        <button class="position-absolute rounded-2"
+                            onclick="window.location.href='../blogs-content/blog1.html'">Read</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid w-100 mt-5">
+        <section class="heroSign row d-flex align-items-center">
+            <div class="info text-center text-light">
+                <h1>Stay Updated with Our Exclusive Newsletter</h1>
+                <p>Sign Up to Stay Inspired Every Week!</p>
+            </div>
+            <div
+                class="inputCont d-flex justify-content-between align-items-center mx-auto bg-transparent py-1 px-3 position-relative">
+                <div>
+                    <i class="fa-regular fa-envelope" style="color: #fff;"></i>
+                    <input type="email" placeholder="Email address" class="border-0 bg-transparent text-light">
+                </div>
+                <button type="submit" class="my-auto bg-transparent text-light border-0 ">Sign Up</button>
+            </div>
+        </section>
+        <footer class="row bg-black p-2">
+            <div
+                class="components col-12 text-light d-flex flex-column flex-lg-row align-items-center justify-content-center ">
+                <div class="left col-12 col-md-5 d-flex justify-content-center">
+                    <h1 class="fst-italic">CasaNova</h1>
+                    <p class="my-auto fst-italic">Everything related to home</p>
+                </div>
+                <div class="right col-12 col-md-5 d-flex justify-content-center">
+                    <ul class="list-unstyled d-flex flex-column flex-md-row gap-4 gap-md-5 align-items-center">
+                        <li class=""><a href="/home/home.html" class="text-light text-opacity-75">Home</a></li>
+                        <li class=""><a href="../shop/shop.html" class="text-light text-opacity-75">Shop</a></li>
+                        <li class=""><a href="../shop/shop.html" class="text-light text-opacity-75">Product</a></li>
+                        <li class=""><a href="../blog/blog.html" class="text-light text-opacity-75">Blog</a></li>
+                        <li class=""><a href="../contact/contact.html" class="text-light text-opacity-75">Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="usw col-12 text-light text-opacity-75 d-lg-flex h-25 justify-content-between ">
+                <div class="license col-12 col-lg-8 d-md-flex gap-4 text-center justify-content-center">
+                    <h6 class="">Copyright © 2023 3legant. All rights reserved</h6>
+                    <h6 class="">Privacy Policy</h6>
+                    <h6 class="">Terms of Use</h6>
+                </div>
+                <div class="social-medias col-12 col-lg-3 d-flex gap-3 fs-4 justify-content-center">
+                    <a href="#" class="text-light text-opacity-75"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="text-light text-opacity-75"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#" class="text-light text-opacity-75"><i class="fa-brands fa-twitter"></i></a>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script type="module" src="blog.js"></script>
+</body>
+
+</html>

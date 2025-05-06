@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CasaNova</title>
+    <!-- css link -->
+    <link rel="stylesheet" href="home.css">
+    <!--  -->
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--  -->
+    <!-- Bootrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!--  -->
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="discountRow row bg-secondary bg-opacity-25 text-center">
+            <h1 class="discountHead col-12"><i class="fa-solid fa-percent me-2"></i>Hurry! 30% OFF NOW!<span
+                    class="ms-3 text-decoration-underline text-primary shopNowText">Shop now <i
+                        class="fa-solid fa-arrow-right ms-1"></i></span></h1>
+        </div>
+        <div class="row hero">
+            <header class="header w-100 d-flex justify-content-around  position-relative">
+                <h1 class="logo"><i class="fa-solid fa-bars fs-4 d-lg-none barBtn" onclick="showNav()"></i> CasaNova.
+                </h1>
+                <div class="middle  d-none d-lg-block">
+                    <ul class="d-flex gap-5 h-100 align-items-center  ">
+                        <li class="list-unstyled fs-5 fw-light">
+                            <a href="./home.html" class="text-decoration-none active">
+                                Home
+                            </a>
+                        </li>
+                        <li class="list-unstyled fs-5 fw-light">
+                            <a href="/shop/shop.html" class="text-decoration-none">
+                                Shop
+                            </a>
+                        </li>
+                        <li class="list-unstyled fs-5 fw-light">
+                            <a href="/blogs/blog.html" class="text-decoration-none">
+                                Blog
+                            </a>
+                        </li>
+                        <li class="list-unstyled fs-5  fw-light">
+                            <a href="/contact-us/contact.html" class="text-decoration-none">
+                                Contact Us
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="right-components  d-flex gap-3 align-items-center">
+                    <div class="searchCont  d-none d-md-block">
+                        <i class="fa-solid fa-magnifying-glass fs-4 searchBtn" onclick="openSearch()"></i>
+                        <input type="text" placeholder="Search" class="searchInput z-2">
+                    </div>
+                    <a href="../sign-up/sign.html"> <i class="fa-regular fa-circle-user fs-4 "></i> </a>
+                    <a href="#"><i class="fa-solid fa-basket-shopping fs-4" onclick="openCart()"><span
+                                class="badge bg-black">0</span></i></a>
+                </div>
+            </header>
+            <div class="navCont row w-auto z-2">
+                <div class="p-3 navB">
+                    <div class="head d-flex justify-content-between align-items-center">
+                        <h1 class="fw-light">CasaNova.</h1>
+                        <i class="fa-solid fa-xmark fs-1 closeNav" onclick="closeNav()"></i>
+                    </div>
+                    <div class="input-container bg-light mt-4 w-100">
+                        <input type="text" name="search" autocomplete="off" id="searchInput" placeholder="Search"
+                            class="border-0">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                            fill="#5f6368">
+                            <path
+                                d="M784-120 532-372q-30 24-69 38t-83 14q-109 0-184.5-75.5T120-580q0-109 75.5-184.5T380-840q109 0 184.5 75.5T640-580q0 44-14 83t-38 69l252 252-56 56ZM380-400q75 0 127.5-52.5T560-580q0-75-52.5-127.5T380-760q-75 0-127.5 52.5T200-580q0 75 52.5 127.5T380-400Z">
+                            </path>
+                        </svg>
+                    </div>
+                    <ul class="list-unstyled p-4 d-flex flex-column gap-4 mt-3 navList">
+                        <li>
+                            <a href="./home.html" class="text-decoration-none fs-5 fst-italic">Home</a>
+                        </li>
+                        <li>
+                            <a href="../shop/shop.html" class="text-decoration-none fs-5 fst-italic">Shop</a>
+                        </li>
+                        <li>
+                            <a href="../blogs/blog.html" class="text-decoration-none fs-5 fst-italic">Blog</a>
+                        </li>
+                        <li>
+                            <a href="../contact-us/contact.html" class="text-decoration-none fs-5 fst-italic">Contact
+                                Us</a>
+                        </li>
+                    </ul>
+                    <div class="bottom col-10 ps-4 mt-5">
+                        <div class="card-cont d-flex justify-content-between">
+                            <h2>Card</h2>
+                            <a href="../cart/cart.html">
+                                <i class="fa-solid fa-basket-shopping"><span
+                                        class="badge bg-black rounded-5 ms-1">0</span></i>
+                            </a>
+                        </div>
+                        <div class="wish-list d-flex justify-content-between">
+                            <h2>Wishlist</h2>
+                            <a href="#wishList">
+                                <i class="fa-regular fa-heart"><span class="badge bg-black rounded-5 ms-1">0</span></i>
+                            </a>
+                        </div>
+                        <button class="signBtn w-100 p-1 mt-2 fs-3 rounded-1">Sign In</button>
+                        <div class="social d-flex gap-3 mt-3 text-black">
+                            <a href="#"><i class="fa-brands fa-instagram text-decoration-none fs-1"></i></a>
+                            <a href="#"><i class="fa-brands fa-facebook text-decoration-none fs-1"></i></a>
+                            <a href="#"><i class="fa-brands fa-youtube text-decoration-none fs-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cart-cont row">
+                <div class="cart-nav col-sm-8 col-md-5 col-lg-4 ms-auto">
+                    <div class="cart-head col-12 d-flex justify-content-between align-items-center p-2">
+                        <h2>Cart</h2>
+                        <i class="fa-solid fa-xmark fs-3 text-dark text-opacity-50" onclick="closeCart()"></i>
+                    </div>
+                    <div class="product-cont mt-4">
+                        <!-- <div class="prd row d-flex align-items-center border-bottom p-2 mt-3">
+                            <div class="prd-img col-4 col-md-3">
+                                <img src="../shop/productImg/bed.png" alt="" class="img-fluid">
+                            </div>
+                            <div class="col-8 col-md-8 prd-img">
+                                <div class="head d-flex justify-content-between align-items-center">
+                                    <h5 class="prd-name m-0 p-0">Modern Bed</h5>
+                                    <p class="prd-price m-0 p-0 fw-bold">$29.99</p>
+                                </div>
+                                <div
+                                    class="middle d-flex justify-content-between align-items-center text-dark text-opacity-50">
+                                    <p class="color m-0 p-0">Color: Black</p>
+                                    <i class="fa-solid fa-xmark fs-3"></i>
+                                </div>
+                                <div
+                                    class="in-decreament d-flex justify-content-center align-items-center  gap-2 rounded-2 p-md-0">
+                                    <p class="fs-5 fw-bold  m-0 minus">−</p>
+                                    <p class="fs-3 m-0 count">1</p>
+                                    <p class="fs-5 fw-bold m-0 plus">＋</p>
+                                </div>
+                            </div>
+                        </div> -->
+                    </div>
+                    <div class="card-bottom">
+                        <!-- <div class="sub-total d-flex justify-content-between align-items-center p-1 border-bottom">
+                            <h5 class="text-dark text-opacity-50">Subtotal</h5>
+                            <p class="m-0 p-0 fw-bold">$99.99</p>
+                        </div> -->
+                        <div class="total d-flex justify-content-between align-items-center p-1 border-bottom mt-2">
+                            <h5>Total</h5>
+                            <p class="total-price m-0 p-0 fw-bold">$199.99</p>
+                        </div>
+                    </div>
+                    <button
+                        class="col-9 ms-auto me-auto d-flex justify-content-center p-2 mt-2 rounded-3">Checkout</button>
+                    <a href="../cart/cart.html"
+                        class="viewCart col-3 ms-auto me-auto d-flex justify-content-center mt-2">
+                        View Cart</a>
+                </div>
+            </div>
+            <main class="main-cont row d-flex gap-2 m-auto mt-2 justify-content-center">
+                <div class="livingroom col-12 col-md-5 d-flex
+                 align-items-center position-relative">
+                    <div class="head position-absolute">
+                        <h1 class="fs-1">Living Room</h1>
+                        <span class="shopNowText text-primary text-decoration-underline">Shop Now <i
+                                class="fa-solid fa-arrow-right ms-1"></i></span>
+                    </div>
+                    <img src="mainImg/livingroom.png" class="img-fluid" alt="">
+                </div>
+                <div class="col-12 col-md-6 ">
+                    <div class="col-12 h-50 bedroom d-flex justify-content-around p-4">
+                        <div class="head mt-4 col-6">
+                            <h1>Bed Room</h1>
+                            <span class="shopNowText text-primary text-decoration-underline">Shop Now <i
+                                    class="fa-solid fa-arrow-right ms-1"></i></span>
+                        </div>
+                        <img src="mainImg/bed2.png" class="img-fluid" alt="">
+                    </div>
+                    <div class="col-12 h-50 kitchen mt-1 d-flex justify-content-around p-4">
+                        <div class="head mt-4 col-6">
+                            <h1>Kitchen</h1>
+                            <span class="shopNowText text-primary text-decoration-underline">Shop Now <i
+                                    class="fa-solid fa-arrow-right ms-1"></i></span>
+                        </div>
+                        <img src="mainImg/kitchen2.png" class="img-fluid" alt="">
+                    </div>
+                </div>
+            </main>
+            <section class="imgSlide row mt-3 d-flex justify-content-center">
+                <div id="carouselExampleDark" class="carousel carousel-dark slide col-12 col-lg-10">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
+                            aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2"
+                            aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active" data-bs-interval="10000">
+                            <img src="homeSlide/slide2.jpg" class="d-block w-100" alt="...">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5 class="text-light">Add Style to Your Home: Where Elegance Meets Comfort.</h5>
+                            </div>
+                        </div>
+                        <div class="carousel-item" data-bs-interval="2000">
+                            <img src="homeSlide/slide3.jpg" class="d-block w-100" alt="...">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5 class="text-light">Modern Furniture for Every Room: Design Your Dream Space.</h5>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="homeSlide/slide1.jpg" class="d-block w-100" alt="...">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5 class="text-light">Discover the Joy of Quality Furniture for a Cozy Home.</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+                <div class="desc row d-flex justify-content-center align-items-center">
+                    <div class="col-12 col-md-5">
+                        <h1 class="fs-1 fw-bold">Simple Unique</h1>
+                        <h2 class="fs-2 fw-bold">Simple Better.</h2>
+                    </div>
+                    <p class="col-12 col-md-5"> CasaNova is a gift & decorations store based in HCMC, Azerbaijan. Est
+                        since 2025. </p>
+                </div>
+            </section>
+            <section class="newArrivals row d-flex justify-content-center mt-5">
+                <div class="col-10 d-flex justify-content-between align-items-center title">
+                    <h1 class="fst-italic">New<br>Arrivals</h1>
+                    <span class="ms-3 text-decoration-underline text-primary shopNowText">More Products <i
+                            class="fa-solid fa-arrow-right ms-1"></i></span>
+                </div>
+                <div class="product-list p-3 row mt-5 d-flex flex-nowrap overflow-scroll overflow-y-hidden">
+                    <div class="product col-12 col-md-3">
+                        <div class="product-main position-relative p-4">
+                            <div class="product-head d-flex justify-content-between">
+                                <div class="title">
+                                    <h5>New</h5>
+                                    <p class="fw-bold">-50%</p>
+                                </div>
+                                <i class="fa-regular fa-heart rounded h-25 p-1 bg-light"></i>
+                            </div>
+                            <div class="img-cont">
+                                <img src="/home/newArrPhoto/tableLamp.png" class="img-fluid" alt="">
+                            </div>
+                            <button class=" bg-black text-light w-75">Shop Now</button>
+                        </div>
+                        <div class="product-desc">
+                            <div class="stars">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <h5>Table Lamp</h5>
+                            <h6 class="price">$45.99 <span
+                                    class="text-black opacity-75 text-decoration-line-through ms-2">$65.99</span></h6>
+                        </div>
+                    </div>
+                    <div class="product col-10 col-md-3">
+                        <div class="product-main position-relative p-4">
+                            <div class="product-head d-flex justify-content-between">
+                                <div class="title">
+                                    <h5>New</h5>
+                                    <p class="fw-bold">-50%</p>
+                                </div>
+                                <i class="fa-regular fa-heart rounded h-25 p-1 bg-light"></i>
+                            </div>
+                            <div class="img-cont">
+                                <img src="/home/newArrPhoto/chair.png" class="img-fluid" alt="">
+                            </div>
+                            <button class=" bg-black text-light w-75">Shop Now</button>
+                        </div>
+                        <div class="product-desc">
+                            <div class="stars">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <h5>Hous Chair</h5>
+                            <h6 class="price">$159.99 <span
+                                    class="text-black opacity-75 text-decoration-line-through ms-2">$129.99</span></h6>
+                        </div>
+                    </div>
+                    <div class="product col-10 col-md-3">
+                        <div class="product-main position-relative p-4">
+                            <div class="product-head d-flex justify-content-between">
+                                <div class="title">
+                                    <h5>New</h5>
+                                    <p class="fw-bold">-50%</p>
+                                </div>
+                                <i class="fa-regular fa-heart rounded h-25 p-1 bg-light"></i>
+                            </div>
+                            <div class="img-cont">
+                                <img src="/home/newArrPhoto/basket.png" class="img-fluid" alt="">
+                            </div>
+                            <button class=" bg-black text-light w-75">Shop Now</button>
+                        </div>
+                        <div class="product-desc">
+                            <div class="stars">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <h5>Home Basket</h5>
+                            <h6 class="price">$17.99 <span
+                                    class="text-black opacity-75 text-decoration-line-through ms-2">$28.99</span></h6>
+                        </div>
+                    </div>
+                    <div class="product col-10 col-md-3">
+                        <div class="product-main position-relative p-4">
+                            <div class="product-head d-flex justify-content-between">
+                                <div class="title">
+                                    <h5>New</h5>
+                                    <p class="fw-bold">-50%</p>
+                                </div>
+                                <i class="fa-regular fa-heart rounded h-25 p-1 bg-light"></i>
+                            </div>
+                            <div class="img-cont">
+                                <img src="/home/newArrPhoto/toaster.png" class="img-fluid" alt="">
+                            </div>
+                            <button class=" bg-black text-light w-75">Shop Now</button>
+                        </div>
+                        <div class="product-desc">
+                            <div class="stars">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <h5>Toaster</h5>
+                            <h6 class="price">$70.99 <span
+                                    class="text-black opacity-75 text-decoration-line-through ms-2">$99.99</span></h6>
+                        </div>
+                    </div>
+                    <div class="product col-10 col-md-3">
+                        <div class="product-main position-relative p-4">
+                            <div class="product-head d-flex justify-content-between">
+                                <div class="title">
+                                    <h5>New</h5>
+                                    <p class="fw-bold">-20%</p>
+                                </div>
+                                <i class="fa-regular fa-heart rounded h-25 p-1 bg-light"></i>
+                            </div>
+                            <div class="img-cont">
+                                <img src="/home/newArrPhoto/drawer.png" class="img-fluid" alt="">
+                            </div>
+                            <button class="bg-black text-light w-75">Shop Now</button>
+                        </div>
+                        <div class="product-desc">
+                            <div class="stars">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <h5>Drawer</h5>
+                            <h6 class="price">$55.99 <span
+                                    class="text-black opacity-75 text-decoration-line-through ms-2">$69.99</span></h6>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section
+                class="services row mt-5 d-flex justify-content-around row-gap-3 gap-md-5 justify-content-md-center">
+                <div class="service col-5 col-md-auto p-4 rounded-2 ">
+                    <i class="fa-solid fa-truck fs-2" style="color: #FFD43B;"></i>
+                    <h5>Free Shipping</h5>
+                    <h6>Order above $200</h6>
+                </div>
+                <div class="service col-5 col-md-auto p-4 rounded-2 ">
+                    <i class="fa-solid fa-money-bill fs-2" style="color: #28a745;"></i>
+                    <h5>Money Back</h5>
+                    <h6>21 Days guarantea</h6>
+                </div>
+                <div class="service col-5 col-md-auto p-4 rounded-2 ">
+                    <i class="fa-solid fa-lock fs-2" style="color: #1081f9;"></i>
+                    <h5>Security</h5>
+                    <h6>Securty by Stripe</h6>
+                </div>
+                <div class="service col-5 col-md-auto p-4  rounded-2 ">
+                    <i class="fa-solid fa-phone fs-2" style="color:#28a745;"></i>
+                    <h5>24/7</h5>
+                    <h6>Phone and E-mail support</h6>
+                </div>
+            </section>
+            <section class="shortInform row mt-5 row-cols-1 row-cols-md-2 ">
+                <img src="home photo.jpg" class="img-fluid" alt="">
+                <div class="right p-5">
+                    <p class="text-primary fw-bold">SALE UP TO 35% OFF</p>
+                    <h2 class="fw-bolder">HUNDREDS of <br>New lower prices!</h2>
+                    <p>It’s more affordable than ever to give every room in your home a stylish makeover</p>
+                    <span class="ms-3 text-decoration-underline text-primary shopNowText">Shop now <i
+                            class="fa-solid fa-arrow-right ms-1"></i></span>
+                </div>
+            </section>
+            <section class="articles row mt-5">
+                <div class="title col-12 d-flex justify-content-between ">
+                    <h2>Articel</h2>
+                    <span class="ms-3 text-decoration-underline text-primary shopNowText">More Articles<i
+                            class="fa-solid fa-arrow-right ms-1"></i></span>
+                </div>
+                <div class="articel col-12 col-md-4 ">
+                    <img src="/home/articelsImg/aricel1.jpg" class="img-fluid" alt="">
+                    <h5>10 Decoration Ideas</h5>
+                    <span class="ms-3 text-decoration-underline text-primary shopNowText text-black">Read More<i
+                            class="fa-solid fa-arrow-right ms-1"></i></span>
+                </div>
+                <div class="articel col-12 col-md-4 ">
+                    <img src="/home/articelsImg/articel2.jpg" class="img-fluid" alt="">
+                    <h5>Make Your Home Spacious</h5>
+                    <span class="ms-3 text-decoration-underline text-primary shopNowText text-black">Read More<i
+                            class="fa-solid fa-arrow-right ms-1"></i></span>
+                </div>
+                <div class="articel col-12 col-md-4 ">
+                    <img src="/home/articelsImg/articel3.jpg" class="img-fluid" alt="">
+                    <h5>Perfect Living Room Furniture</h5>
+                    <span class="ms-3 text-decoration-underline text-primary shopNowText text-black">Read More<i
+                            class="fa-solid fa-arrow-right ms-1"></i></span>
+                </div>
+            </section>
+        </div>
+    </div>
+    <div class="container-fluid w-100">
+        <section class="heroSign row d-flex align-items-center">
+            <div class="info text-center text-light">
+                <h1>Stay Updated with Our Exclusive Newsletter</h1>
+                <p>Sign Up to Stay Inspired Every Week!</p>
+            </div>
+            <div
+                class="inputCont d-flex justify-content-between align-items-center mx-auto bg-transparent py-1 px-3 position-relative">
+                <div>
+                    <i class="fa-regular fa-envelope" style="color: #fff;"></i>
+                    <input type="email" placeholder="Email address" class="border-0 bg-transparent text-light">
+                </div>
+                <button type="submit" class="my-auto bg-transparent text-light border-0">Sign Up</button>
+            </div>
+        </section>
+        <footer class="row bg-black p-2">
+            <div
+                class="components col-12 text-light d-flex flex-column flex-lg-row align-items-center justify-content-center ">
+                <div class="left col-12 col-md-5 d-flex justify-content-center">
+                    <h1 class="fst-italic">CasaNova</h1>
+                    <p class="my-auto fst-italic">Everything related to home</p>
+                </div>
+                <div class="right col-12 col-md-5 d-flex justify-content-center">
+                    <ul class="list-unstyled d-flex flex-column flex-md-row gap-4 gap-md-5 align-items-center">
+                        <li class=""><a href="/home/home.html" class="text-light text-opacity-75">Home</a></li>
+                        <li class=""><a href="../shop/shop.html" class="text-light text-opacity-75">Shop</a></li>
+                        <li class=""><a href="../shop/shop.html" class="text-light text-opacity-75">Product</a></li>
+                        <li class=""><a href="../blog/blog.html" class="text-light text-opacity-75">Blog</a></li>
+                        <li class=""><a href="../contact/contact.html" class="text-light text-opacity-75">Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="usw col-12 text-light text-opacity-75 d-lg-flex h-25 justify-content-between ">
+                <div class="license col-12 col-lg-8 d-md-flex gap-4 text-center justify-content-center">
+                    <h6 class="">Copyright © 2023 3legant. All rights reserved</h6>
+                    <h6 class="">Privacy Policy</h6>
+                    <h6 class="">Terms of Use</h6>
+                </div>
+                <div class="social-medias col-12 col-lg-3 d-flex gap-3 fs-4 justify-content-center">
+                    <a href="#" class="text-light text-opacity-75"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="text-light text-opacity-75"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#" class="text-light text-opacity-75"><i class="fa-brands fa-twitter"></i></a>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script type="module" src="home.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+</body>
+
+</html>

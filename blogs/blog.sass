@@ -1,0 +1,292 @@
+html
+    &::-webkit-scrollbar
+        border-radius: 10px
+        height: 2px
+        width: 10px
+    &::-webkit-scrollbar-thumb
+        background-color: #9e9a9a
+        border-radius: 10px
+body
+    margin: 0
+    padding: 0
+    overflow-x: hidden
+    span
+        cursor: pointer
+    a
+        text-decoration: none
+        color: #000
+    .discountRow
+        display: flex
+        height: 33px
+        .discountHead
+            font-size: 15px
+            height: 100%
+            font-family: "Poppins", serif
+            font-weight: 300
+            font-style: normal
+            display: flex
+            align-items: center
+            justify-content: center
+            cursor: pointer
+            transition: 0.5s
+            span
+                i
+                    transition: 0.4s
+                &:hover i
+                    transform: rotateY(200deg)
+    .hero
+        height: 100%
+        .header
+            .logo
+                font-weight: 300
+                i
+                    transition: 0.3s
+            .middle
+                a
+                    color: #000
+                    font-weight: 200
+                    &.active
+                        font-weight: 450
+            .right-components
+                i
+                    cursor: pointer
+                    span
+                        font-size: 10px
+                .searchCont
+                    input
+                        position: absolute
+                        left: 75%
+                        top: 200%
+                        opacity: 0
+                        padding: 3px 15px
+                        outline: none
+                        border: 1px solid #daddbc
+                        color: #5e5e5e
+                        border-top-right-radius: 20px
+                        border-bottom-left-radius: 20px
+                        transition: 0.4s
+                        visibility: hidden
+                    .showSearch
+                        visibility: visible
+                        top: 100%
+                        opacity: 1
+        .navCont
+            opacity: 0
+            position: absolute
+            left: -100%
+            transition: 0.3s
+            background-color: #fff
+            &.showNav
+                transform: translateX(0)
+                opacity: 1
+                left: 0
+                box-shadow: 0 0 20px #000
+        .navB
+            position: relative
+            .input-container
+                position: relative
+                width: 250px
+                border: 1px solid #dadbdc
+                outline: none
+                border-radius: 10px
+                padding: 5px 17px
+                input
+                    width: 100%
+                    padding: 5px 20px
+                    outline: none
+                    border-radius: 10px
+                svg
+                    position: absolute
+                    left: 5px
+                    top: 25%
+            .navList
+                li
+                    position: relative
+                    &::after
+                        content: ""
+                        position: absolute
+                        left: 0
+                        bottom: -10px
+                        width: 100%
+                        height: 1px
+                        background-color: #dfdede
+                    a
+                        transition: 0.3s ease
+                        &:hover
+                            color: #009dff
+                .card-cont
+                    display: flex
+                    align-items: center
+                    gap: 10px
+                    i
+                        font-size: 20px
+                    .badge
+                        font-size: 11px
+            .signBtn
+                background-color: #000
+                color: #fff
+                transition: 0.4s
+                &:hover
+                    background: #fff
+                    color: #000
+            .social a
+                color: #bcbdbe
+                &:hover
+                    color: #000
+        .cart-cont
+            height: 700px
+            position: absolute
+            left: 0
+            top: 30px
+            z-index: 1
+            transform: translateX(-100%)
+            transition: 0.5s
+            &.showCart
+                transform: translateX(0)
+            .cart-nav
+                background-color: #fff
+                box-shadow: -5px 0px 10px rgba(0, 0, 0, 0.2),0px 5px 10px rgba(0, 0, 0, 0.2)
+                border-radius: 10px
+                .product-cont
+                    height: 400px
+                    overflow-y: scroll
+                    overflow-x: hidden
+                    &::-webkit-scrollbar
+                        -webkit-appearance: none
+                        border-radius: 20px
+                        width: 7px
+                    &::-webkit-scrollbar-thumb
+                        background-color: #c8c6c6
+                        border-radius: 20px
+                    .prd
+                        .prd-img
+                            img
+                                background-color: #ece1e1
+                        .in-decreament
+                            width: 40%
+                            height: 35px
+                            background-color: #fff
+                            border: 1px solid #ada7a7
+                            p
+                                &:nth-child(1),
+                                &:nth-child(3)
+                                    cursor: pointer
+                                    transition: 0.3s
+                                    &:hover
+                                        transform: scale(1.4)
+                .viewCart
+                    border-bottom: 1px solid #000
+                    cursor: pointer
+        .main
+            background-image: url("./mainPhoto.jpg")
+            background-size: cover
+            background-position: center
+            height: 300px
+        .blogs
+            .blog
+                min-height: 310px
+                position: relative
+                transition: 0.3s
+                img
+                    min-height: 180px
+                button
+                    top: 35%
+                    z-index: 1000
+                    background-color: #fff
+                    transform: translateX(-20%)
+                    padding: 5px 40px
+                    background-color: transparent
+                    color: #fff
+                    border: 1px solid #fff
+                    transition: 0.3s
+                    opacity: 0
+                    &:hover
+                        background-color: #d0c9c9
+                        color: #000
+                        border: 1px solid #000
+                &::after
+                    content: ""
+                    position: absolute
+                    left: 0
+                    top: 0
+                    width: 100%
+                    height: 100%
+                    background-color: rgba(0,0,0,0 )
+                    transition: 0.5s
+                    border-radius: 10px
+                &:hover::after
+                    background-color: rgba(19, 17, 17, 0.796)
+                &:hover
+                    transform: scale(0.9)
+    .heroSign
+        height: 300px
+        background-image: url('../home/living2main.jpg')
+        background-size: cover
+        background-position: center
+        position: relative
+        .info
+            height: 80px
+        .inputCont
+            width: 50%
+            input
+                outline: none
+                &::placeholder
+                    color: #efefef
+            &::after
+                content: ""
+                position: absolute
+                left: 0
+                bottom: 0
+                width: 100%
+                height: 3px
+                border-radius: 10px
+                background-color: #ededed
+    footer
+        min-height: 200px
+        .components
+            .left
+                h1
+                    &::after
+                        content: "|"
+                        margin: 0 10px
+
+            .right
+                li
+                    transition: 0.3s ease
+                    &:hover
+                        animation: flash 0.5s ease-in-out
+        .usw
+            position: relative
+            &::after
+                content: ""
+                position: absolute
+                left: 0
+                top: -10px
+                width: 100%
+                height: 1px
+                background-color: #fff
+            .social-medias
+                i
+                    transition: 0.3s ease
+                    &:hover
+                        animation: flash 0.5s ease-in-out
+            .license
+                h6
+                    cursor: pointer
+                    transition: 0.3s ease
+                    &:hover
+                        animation: flash 0.5s ease-in-out
+
+@keyframes flash
+    0%
+        opacity: 1
+        transform: scale(1)
+        color: #fff
+    50%
+        opacity: 0.5
+        transform: scale(1.1)
+        color: #fff
+    100%
+        opacity: 1
+        transform: scale(1)
+        color: #ff

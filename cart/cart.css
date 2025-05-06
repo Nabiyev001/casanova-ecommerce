@@ -1,0 +1,308 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+html::-webkit-scrollbar {
+  border-radius: 10px;
+  height: 2px;
+}
+html::-webkit-scrollbar-thumb {
+  background-color: #b8b4b4;
+  border-radius: 10px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+body span {
+  cursor: pointer;
+}
+body a {
+  text-decoration: none;
+  color: #000;
+}
+body input[type=number]::-webkit-outer-spin-button,
+body input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+body .hero {
+  height: 100%;
+}
+body .hero .header .logo {
+  font-weight: 300;
+}
+body .hero .header .logo i {
+  transition: 0.3s;
+}
+body .hero .header .middle a {
+  color: #000;
+  font-weight: 200;
+}
+body .hero .header .middle a.active {
+  font-weight: 450;
+}
+body .hero .header .right-components i {
+  cursor: pointer;
+}
+body .hero .header .right-components i span {
+  font-size: 10px;
+}
+body .hero .header .right-components .searchCont input {
+  position: absolute;
+  left: 75%;
+  top: 200%;
+  opacity: 0;
+  padding: 3px 15px;
+  outline: none;
+  border: 1px solid #daddbc;
+  color: #5e5e5e;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  transition: 0.4s;
+  visibility: hidden;
+}
+body .hero .header .right-components .searchCont .showSearch {
+  visibility: visible;
+  top: 100%;
+  opacity: 1;
+}
+body .hero .navCont {
+  opacity: 0;
+  position: absolute;
+  left: -100%;
+  transition: 0.3s;
+  background-color: #fff;
+}
+body .hero .navCont.showNav {
+  transform: translateX(0);
+  opacity: 1;
+  left: 0;
+  box-shadow: 0 0 20px #000;
+}
+body .hero .navB {
+  position: relative;
+}
+body .hero .navB .input-container {
+  position: relative;
+  width: 250px;
+  border: 1px solid #dadbdc;
+  outline: none;
+  border-radius: 10px;
+  padding: 5px 17px;
+}
+body .hero .navB .input-container input {
+  width: 100%;
+  padding: 5px 20px;
+  outline: none;
+  border-radius: 10px;
+}
+body .hero .navB .input-container svg {
+  position: absolute;
+  left: 5px;
+  top: 25%;
+}
+body .hero .navB .navList li {
+  position: relative;
+}
+body .hero .navB .navList li::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  width: 100%;
+  height: 1px;
+  background-color: #dfdede;
+}
+body .hero .navB .navList li a {
+  transition: 0.3s ease;
+}
+body .hero .navB .navList li a:hover {
+  color: #009dff;
+}
+body .hero .navB .signBtn {
+  background-color: #000;
+  color: #fff;
+  transition: 0.4s;
+}
+body .hero .navB .signBtn:hover {
+  background: #fff;
+  color: #000;
+}
+body .hero .navB .social a {
+  color: #bcbdbe;
+}
+body .hero .navB .social a:hover {
+  color: #000;
+}
+body .hero .cart-cont .cart-name {
+  font-size: 40px;
+}
+body .hero .cart-cont .processing .process {
+  min-height: 50px;
+}
+body .hero .cart-cont .processing .process .process-number {
+  background-color: #000;
+  border-radius: 50%;
+  font-size: 20px;
+}
+body .hero .cart-cont .processing .process .process-name {
+  color: #777575;
+}
+body .hero .cart-cont .processing .complete {
+  border-bottom: 2px solid #38cb89;
+}
+body .hero .cart-cont .processing .complete .process-name {
+  color: #38cb89;
+}
+body .hero .cart-cont .processing .complete .process-number {
+  background-color: #38cb89;
+}
+body .hero .cart-cont .processing .process-first {
+  border-bottom: 2px solid #000;
+}
+body .hero .cart-cont .first-stage .products-cont {
+  min-height: 200px;
+}
+body .hero .cart-cont .first-stage .products-cont .quantiy {
+  border: 1px solid #aaa0a0;
+  border-radius: 7px;
+  min-width: 90px;
+}
+body .hero .cart-cont .first-stage .products-cont .quantiy p:nth-child(1), body .hero .cart-cont .first-stage .products-cont .quantiy p:nth-child(3) {
+  cursor: pointer;
+  transition: 0.3s;
+}
+body .hero .cart-cont .first-stage .products-cont .quantiy p:nth-child(1):hover, body .hero .cart-cont .first-stage .products-cont .quantiy p:nth-child(3):hover {
+  transform: scale(1.4);
+}
+body .hero .cart-cont .first-stage .products-cont .remove {
+  cursor: pointer;
+}
+body .hero .cart-cont .first-stage .cart-summary {
+  border: 2px solid #a7a0a0;
+  border-radius: 10px;
+  height: 370px;
+}
+body .hero .cart-cont .first-stage .cart-summary .shipping-methodes .methode {
+  height: 50px;
+  border: 1px solid #000;
+}
+body .hero .cart-cont .first-stage .cart-summary .shipping-methodes .methode .square {
+  width: 20px;
+  height: 20px;
+  border: 1px solid #000;
+  border-radius: 50%;
+  cursor: pointer;
+}
+body .hero .cart-cont .first-stage .cart-summary .shipping-methodes .methode .square .dot {
+  cursor: pointer;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+}
+body .hero .cart-cont .first-stage .cart-summary .shipping-methodes .methode .square .checked {
+  background-color: #000;
+}
+body .hero .cart-cont .first-stage .cart-summary .shipping-methodes .checkedMethode {
+  background-color: #daeaef;
+}
+body .hero .cart-cont .first-stage .check-out {
+  background-color: #000;
+  color: #fff;
+  transition: 0.3s;
+}
+body .hero .cart-cont .first-stage .check-out:hover {
+  background-color: #fff;
+  color: #000;
+}
+body .hero .cart-cont .first-stage .coupon .input {
+  border: 1px solid #a29e9e;
+  border-radius: 5px;
+}
+body .hero .cart-cont .first-stage .coupon .input input {
+  outline: none;
+}
+body .hero .cart-cont .second-stage input {
+  outline: none;
+}
+body .hero .cart-cont .second-stage .cart-information, body .hero .cart-cont .second-stage .shipping-adress, body .hero .cart-cont .second-stage .payment-methode {
+  border: 2px solid #797676;
+  border-radius: 10px;
+  padding: 20px;
+}
+body .hero .cart-cont .second-stage .payment-methode .methode {
+  border: 1px solid #6d6b6b;
+}
+body .hero .cart-cont .second-stage .payment-methode .methode .square {
+  width: 20px;
+  height: 20px;
+  border: 1px solid #000;
+  border-radius: 50%;
+  cursor: pointer;
+}
+body .hero .cart-cont .second-stage .payment-methode .methode .square .dot {
+  cursor: pointer;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+}
+body .hero .cart-cont .second-stage .payment-methode .methode .square .checked {
+  background-color: #000;
+}
+body .hero .cart-cont .second-stage .placeOrder {
+  background-color: #000;
+  color: #fff;
+  transition: 0.3s;
+}
+body .hero .cart-cont .second-stage .placeOrder:hover {
+  background-color: #fff;
+  color: #000;
+}
+body .hero .cart-cont .second-stage .order-summary {
+  border: 2px solid #797676;
+  border-radius: 10px;
+  padding: 20px;
+}
+body .hero .cart-cont .second-stage .order-summary .product-cont {
+  height: 400px;
+}
+body .hero .cart-cont .second-stage .order-summary .product-cont::-webkit-scrollbar {
+  width: 4px;
+  border-radius: 10px;
+}
+body .hero .cart-cont .second-stage .order-summary .product-cont::-webkit-scrollbar-thumb {
+  background-color: #313030;
+  border-radius: 10px;
+}
+body .hero .cart-cont .second-stage .order-summary .product-cont .prd .quantiy {
+  border: 1px solid #000;
+}
+body .hero .cart-cont .second-stage .order-summary .product-cont .prd .quantiy p:nth-child(1), body .hero .cart-cont .second-stage .order-summary .product-cont .prd .quantiy p:nth-child(3) {
+  cursor: pointer;
+  transition: 0.3s;
+}
+body .hero .cart-cont .second-stage .order-summary .product-cont .prd .quantiy p:nth-child(1):hover, body .hero .cart-cont .second-stage .order-summary .product-cont .prd .quantiy p:nth-child(3):hover {
+  transform: scale(1.4);
+}
+body .hero .cart-cont .second-stage .order-summary .input button {
+  transition: 0.3s;
+}
+body .hero .cart-cont .second-stage .order-summary .input button:active {
+  transform: translateY(2px);
+}
+body .hero .cart-cont .final-stage .stage-cont {
+  box-shadow: 0 5px 15px #5a5757;
+}
+body .hero .cart-cont .final-stage .prd-cont .prd {
+  border-radius: 6px;
+  background-color: #dee8e8;
+}
+body .hero .cart-cont .final-stage .prd-cont .prd .count {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  border-radius: 50%;
+  font-size: 15px;
+}
+body .container-fluid footer {
+  min-height: 200px;
+}/*# sourceMappingURL=cart.css.map */
